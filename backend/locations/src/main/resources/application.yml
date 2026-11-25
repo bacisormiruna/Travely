@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: location-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/location_db
+    username: travely
+    password: travely
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8082

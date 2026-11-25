@@ -1,9 +1,9 @@
 spring:
   application:
-    name: travely-backend
+    name: location-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/travely
+    url: jdbc:postgresql://localhost:5433/location_db
     username: travely
     password: travely
 
@@ -18,9 +18,5 @@ spring:
   flyway:
     enabled: true
 
-  mail:
-    host: localhost
-    port: 1025
-
 server:
-  port: 8080
+  port: 8082

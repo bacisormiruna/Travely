@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: travely-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/travely
+    username: travely
+    password: travely
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+
+  mail:
+    host: localhost
+    port: 1025
+
+server:
+  port: 8080

@@ -12,12 +12,17 @@ spring:
               predicates:
                 - Path=/api/locations/**,/api/attractions/**
 
+            - id: auth-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/auth/**
+
           globalcors:
             cors-configurations:
               '[/**]':
                 allowedOrigins:
-                  - "http://localhost:5173"   # React (Vite)
-                  - "http://localhost:4200"   # Angular
+                  - "http://localhost:5173"
+                  - "http://localhost:4200"
                 allowedMethods:
                   - GET
                   - POST

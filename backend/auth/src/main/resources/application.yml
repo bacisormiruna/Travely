@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/auth_db
+    username: travely
+    password: travely
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8081
+
+travely:
+  jwt:
+    secret: ${JWT_SECRET:travely-dev-secret-key-change-me-in-production-2026}
+    expiration-minutes: 60
+  admin:
+    email: ${ADMIN_EMAIL:admin@travely.com}
+    password: ${ADMIN_PASSWORD:Admin12345!}

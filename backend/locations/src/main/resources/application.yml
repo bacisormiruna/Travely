@@ -20,3 +20,8 @@ spring:
 
 server:
   port: 8082
+
+travely:
+  jwt:
+    secret: ${JWT_SECRET:travely-dev-secret-key-change-me-in-production-2026}
+    issuer: travely-auth
